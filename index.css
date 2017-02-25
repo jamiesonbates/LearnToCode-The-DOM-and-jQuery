@@ -1,5 +1,42 @@
-html {
+html, body {
+  height: 100vh;
   background: url('http://www.diyphotography.net/wordpress/wp-content/uploads/2014/03/adam-elmakias-08.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+body {
+  display: flex;
+}
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+.keys {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.key {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 7%; border: 5px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+}
+
+.key h5 {
+  font-size: 2rem;
+  color: rgb(255, 103, 18);
+}
+
+.key p {
+  font-size: 1rem;
+  color: rgb(218, 53, 255);
 }
