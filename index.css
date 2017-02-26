@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, p {
   width: 7%; border: 5px solid black;
   border-radius: 5px;
   display: flex;
+  transition: all .07s ease;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
