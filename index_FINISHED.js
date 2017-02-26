@@ -2,11 +2,11 @@
 const $keys = $('.key');
 
 $(window).on('keydown', (event) => {
-  console.log(event);
-  const $key = event.keyCode;
+  const $key = $(`.key[data-key=${event.keyCode}]`);
   console.log($key);
-  // $(event.target).attr('data-key');
-  const $audio = $(`audio[data-key=${$key}]`)[0];
+  const $audio = $(`audio[data-key=${event.keyCode}]`)[0];
+  console.log($audio);
+  $key.addClass('playing');
 
   $audio.currentTime = 0;
 
