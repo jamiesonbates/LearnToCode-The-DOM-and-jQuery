@@ -1,40 +1,14 @@
 // Select all keys
 const $keys = $('.key');
 
-$keys.on('click', (event) => {
-  const key = $(event.target).attr('data-key');
-  console.log(key);
-  switch (key) {
-    case 65:
+$(window).on('keydown', (event) => {
+  console.log(event);
+  const $key = event.keyCode;
+  console.log($key);
+  // $(event.target).attr('data-key');
+  const $audio = $(`audio[data-key=${$key}]`)[0];
 
-      break;
+  $audio.currentTime = 0;
 
-    case 83:
-
-      break;
-
-    case 68:
-
-      break;
-
-    case 70:
-
-      break;
-
-    case 71:
-
-      break;
-
-    case 72:
-
-      break;
-
-    case 74:
-
-      break;
-
-    case 75:
-
-      break;
-  }
+  $audio.play();
 });
